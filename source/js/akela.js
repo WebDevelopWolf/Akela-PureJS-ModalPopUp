@@ -3,13 +3,13 @@ function openModal(clicked_id) {
   var button = document.getElementById(clicked_id);
   var modal = button.getAttribute("data-modal");
   var modalElement = document.getElementById(modal);
-  modalElement.className += " modal-open";
   var backdrop = document.createElement('div');
   backdrop.id="modal-backdrop";
   backdrop.classList.add("modal-backdrop");
   document.body.appendChild(backdrop);
   var backdrop = document.getElementById("modal-backdrop");
   backdrop.className += " modal-open";
+  modalElement.className += " modal-open";
   // Close Same Modal Event Handlers
   (function() {
     document.getElementById("modal-close").onclick = function(e) {

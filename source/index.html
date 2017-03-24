@@ -5,31 +5,66 @@
     </head>
     <body>
         <div id="heading">
-        <h1><i class="fa fa-paw"></i> Akela - The Pure JS Pop-up</h1>
-        <h3>A lightweight modal pop-up with no framework dependancy that's mobile friendly.</h3>
-        </div>
+  <h1><i class="fa fa-paw"></i> Akela - The Pure JS Pop-up</h1>
+  <h3>A lightweight modal pop-up with no framework dependancy that's mobile friendly.</h3>
+</div>
 
-        <!--Modal Trigger-->
-        <div id="trigger">
-        <button id="staticbtn" data-modal="static" onClick="openModal(this.id)" class="btn btn-info">Show Static Modal</button><br />
-        <small><i class="fa fa-star"></i> Made with the help of Font Awesome <i class="fa fa-star"></i></small>
-        </div>
+<!--Modal Trigger-->
+<div id="trigger">
+  <button id="staticbtn" data-modal="static" onClick="openModal(this.id)" class="btn btn-info">Show Static Modal</button><br />
+  <button id="largebtn" data-modal="large" onClick="openModal(this.id)" class="btn btn-info">Show Large Modal</button><br />
+  <button id="smallbtn" data-modal="small" onClick="openModal(this.id)" class="btn btn-info">Show Small Modal</button><br />
+  <small><i class="fa fa-star"></i> Made with the help of Font Awesome <i class="fa fa-star"></i></small>
+</div>
 
-        <!--Static Modal-->
-        <div id="static" class="modal" tabindex="-1">
-        <div class="modal-content">
-            <div class="modal-heading">
-            <h2><i class="fa fa-paw"></i> Hello World</h2>
-            <div class="close"><i id="close" class="fa fa-close"></i></div>
-            </div>
-            <div class="modal-body">
-            I'm a pop up!
-            </div>
-            <div id="modalFooter" class="modal-footer">
-            <button id="modal-close" type="button" class="btn btn-info">Close</button>
-            </div>
-        </div>
-        </div>
+<!--Static Modal-->
+<div id="static" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-content">
+    <div class="modal-heading">
+      <h2><i class="fa fa-paw"></i> Hello World</h2>
+      <div class="close"><i id="close" class="fa fa-close"></i></div>
+    </div>
+    <div class="modal-body">
+      I'm a pop up!
+    </div>
+    <div id="modalFooter" class="modal-footer">
+      <button id="modal-close" type="button" class="btn btn-info">Close</button>
+    </div>
+  </div>
+</div>
+
+<!--Static Modal-->
+<div id="large" class="modal large" tabindex="-1" role="dialog">
+  <div class="modal-content">
+    <div class="modal-heading">
+      <h2><i class="fa fa-paw"></i> Hello World</h2>
+      <div class="close"><i id="close" class="fa fa-close"></i></div>
+    </div>
+    <div class="modal-body">
+      I'm a LARGE pop up!
+    </div>
+    <div id="modalFooter" class="modal-footer">
+      <button id="modal-close" type="button" class="btn btn-info">Close</button>
+    </div>
+  </div>
+</div>
+
+<!--Static Modal-->
+<div id="small" class="modal small" tabindex="-1" role="dialog">
+  <div class="modal-content">
+    <div class="modal-heading">
+      <h2><i class="fa fa-paw"></i> Hello World</h2>
+      <div class="close"><i id="close" class="fa fa-close"></i></div>
+    </div>
+    <div class="modal-body">
+      I'm a small pop up!
+    </div>
+    <div id="modalFooter" class="modal-footer">
+      <button id="modal-close" type="button" class="btn btn-info">Close</button>
+    </div>
+  </div>
+</div>
+
 
         <script src="js/akela.js"></script>
         <script src="https://use.fontawesome.com/f79e01ac29.js"></script>

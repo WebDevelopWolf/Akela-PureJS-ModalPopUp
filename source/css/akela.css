@@ -52,6 +52,14 @@ h3 {
   display:none;
 }
 
+.large {
+  width: 65%;
+}
+
+.small {
+  width: 25%;
+}
+
 small {
   text-align:center;
   color: #FFF;
