@@ -1,5 +1,20 @@
 var modal = function () {
   
+  // Modal ID
+  this.modalID = "";
+  
+  this.show = function (modalId) {
+    var modalElement = document.getElementById(modalId);
+    var backdrop = document.createElement('div');
+    backdrop.id="modal-backdrop";
+    backdrop.classList.add("modal-backdrop");
+    document.body.appendChild(backdrop);
+    var backdrop = document.getElementById("modal-backdrop");
+    backdrop.className += " modal-open";
+    modalElement.className += " modal-open";
+    this.init();
+  }
+  
   // Modal Close Listeners
   this.closeModalListen = function(button) {
     var modalFooter = button.parentElement;
@@ -59,6 +74,15 @@ var modal = function () {
           }
           element = element.parentNode;
       }
+  }
+}
+
+// Initalise Modal Engine
+function showModal () {
+  var check = document.getElementById('c1');
+  if (check.checked) {
+    var akelaModal = new modal();
+    akelaModal.show('static'); 
   }
 }
 

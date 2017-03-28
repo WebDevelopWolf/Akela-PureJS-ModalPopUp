@@ -14,6 +14,9 @@
   <button id="staticbtn" data-modal="static" class="btn btn-info akela">Show Static Modal</button><br />
   <button id="largebtn" data-modal="large" class="btn btn-info akela">Show Large Modal</button><br />
   <button id="smallbtn" data-modal="small" class="btn btn-info akela">Show Small Modal</button><br />
+  <input type="checkbox" id="c1" />
+    <label for="c1"><span></span>Fire Modal?</label><br /><br />
+  <button id="staticbtn" class="btn btn-info" onClick="showModal();">Call from JS</button><br />
   <small><i class="fa fa-star"></i> Made with the help of Font Awesome <i class="fa fa-star"></i></small>
 </div>
 
@@ -65,7 +68,37 @@
   </div>
 </div>
 
+<!--Static Modal-->
+<div id="staticjs" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-content">
+    <div class="modal-heading">
+      <h2><i class="fa fa-paw"></i> Hello World</h2>
+      <div class="close"><i id="close" class="fa fa-close"></i></div>
+    </div>
+    <div class="modal-body">
+      I was called from JS!
+    </div>
+    <div id="modalFooter" class="modal-footer">
+      <button id="modal-close" type="button" class="btn btn-info close">Close</button>
+    </div>
+  </div>
+</div>
+
         <script src="akela.min.js"></script>
         <script src="https://use.fontawesome.com/f79e01ac29.js"></script>
+        <script>
+          // Initalise Modal Engine
+          function showModal () {
+            var check = document.getElementById('c1');
+            if (check.checked) {
+              var akelaModal = new modal();
+              akelaModal.show('staticjs'); 
+            }
+          }
+
+          // Initalise Modal Engine
+          var akelaModel = new modal();
+          akelaModel.init();
+        </script>
     </body>
 </html>
