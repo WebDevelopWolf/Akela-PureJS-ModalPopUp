@@ -5,7 +5,7 @@
     </head>
     <body>
         <div id="heading">
-  <h1><i class="fa fa-paw"></i> Akela - The Pure JS Pop-up</h1>
+  <h1><i id="modal-icon" class="fa fa-paw"></i> Akela - The Pure JS Pop-up</h1>
   <h3>A lightweight modal pop-up with no framework dependancy that's mobile friendly.</h3>
 </div>
 
@@ -24,7 +24,7 @@
 <div id="static" class="modal" tabindex="-1" role="dialog">
   <div class="modal-content">
     <div class="modal-heading">
-      <h2><i class="fa fa-paw"></i> Hello World</h2>
+      <h2><i id="modal-icon" class="fa fa-paw"></i> Hello World</h2>
       <div class="close"><i id="close" class="fa fa-close"></i></div>
     </div>
     <div class="modal-body">
@@ -40,7 +40,7 @@
 <div id="large" class="modal large" tabindex="-1" role="dialog">
   <div class="modal-content">
     <div class="modal-heading">
-      <h2><i class="fa fa-paw"></i> Hello World</h2>
+      <h2><i id="modal-icon" class="fa fa-paw"></i> Hello World</h2>
       <div class="close"><i id="close" class="fa fa-close"></i></div>
     </div>
     <div class="modal-body">
@@ -56,7 +56,7 @@
 <div id="small" class="modal small" tabindex="-1" role="dialog">
   <div class="modal-content">
     <div class="modal-heading">
-      <h2><i class="fa fa-paw"></i> Hello World</h2>
+      <h2><i id="modal-icon" class="fa fa-paw"></i> Hello World</h2>
       <div class="close"><i id="close" class="fa fa-close"></i></div>
     </div>
     <div class="modal-body">
@@ -72,7 +72,7 @@
 <div id="staticjs" class="modal" tabindex="-1" role="dialog">
   <div class="modal-content">
     <div class="modal-heading">
-      <h2><i class="fa fa-paw"></i> Hello World</h2>
+      <h2><i id="modal-icon" class="fa fa-paw"></i> Hello World</h2>
       <div class="close"><i id="close" class="fa fa-close"></i></div>
     </div>
     <div class="modal-body">
@@ -98,6 +98,7 @@
 
           // Initalise Modal Engine
           var akelaModel = new modal();
+          akelaModel.Backdrop = false;
           akelaModel.init();
         </script>
     </body>
